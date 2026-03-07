@@ -77,6 +77,8 @@ RUN wget https://github.com/Ar-Ray-code/rpi-bullseye-ros2/releases/download/ros2
 WORKDIR /home
 USER ros
 RUN git clone https://github.com/hailo-ai/hailo-rpi5-examples.git 
+WORKDIR /home/hailo-rpi5-examples
+RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-vision.git
 
 # ROS OpenCV
 WORKDIR /home/ros/vision_opencv/src
@@ -85,8 +87,5 @@ RUN git clone https://github.com/ros-perception/vision_opencv.git -b iron
 # ROS Interfaces
 WORKDIR /home/ros/drone_det_itfc/src
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-interfaces.git
-
-WORKDIR /home/ros
-RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-vision.git
 
 CMD ["bash"]
