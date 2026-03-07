@@ -74,10 +74,10 @@ RUN wget https://github.com/Ar-Ray-code/rpi-bullseye-ros2/releases/download/ros2
     && pip install --break-system-packages vcstool colcon-common-extensions
 
 # Hailo    
-WORKDIR /home
+WORKDIR /home/ros
 USER ros
 RUN git clone https://github.com/hailo-ai/hailo-rpi5-examples.git 
-WORKDIR /home/hailo-rpi5-examples
+WORKDIR /home/ros/hailo-rpi5-examples
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-vision.git
 
 # ROS OpenCV
