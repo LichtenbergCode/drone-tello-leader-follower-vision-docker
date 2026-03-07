@@ -1,0 +1,14 @@
+xhost +local:docker
+
+docker compose build 
+docker compose up -d hailo-ubuntu-pi
+docker compose exec hailo-ubuntu-pi /bin/bash
+
+---
+apt install hailo-all 
+---
+verify installation 
+
+hailortcli fw-control identify 
+gst-inspect-1.0 hailotools 
+gst-inspect-1.0 hailo
