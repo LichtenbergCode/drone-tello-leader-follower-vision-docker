@@ -61,15 +61,15 @@ RUN apt-get install -y python3-venv meson
 # Installing Tkinter 
 RUN apt-get install -y python3-tk
 
-# Installing pyinput dependencies
-RUN apt-get update && \
-    apt-get install -y \
+# Installing pynput dependencies
+RUN apt-get install -y \
     libx11-6 \
     libx11-xcb1 \
     libxcb1 \
     libxkbcommon-x11-0 \
     libxtst6 \
-    libxi6 
+    libxi6 \
+    console-setup
 
 # Download Raspberry Pi examples
 RUN git clone --depth 1 https://github.com/raspberrypi/rpicam-apps.git
