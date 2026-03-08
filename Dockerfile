@@ -90,7 +90,7 @@ RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-int
 
 # GUI/ Control 
 WORKDIR /home/ros
-RUN git clone https://github.com/LichtenbergCode/tello-pid-altitude-control-ros2.git
+RUN git clone https://github.com/LichtenbergCode/tello-leader-follower.git.git
 
 WORKDIR /home
 
