@@ -8,6 +8,7 @@ services:
       - UDEV=1
     devices:
       - /dev/dri:/dev/dri
+      - /dev/input:/dev/input
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev:/dev
