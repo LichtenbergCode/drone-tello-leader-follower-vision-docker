@@ -88,4 +88,10 @@ RUN git clone https://github.com/ros-perception/vision_opencv.git -b iron
 WORKDIR /home/ros/drone_det_itfc/src
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-interfaces.git
 
+# GUI/ Control 
+WORKDIR /home/ros
+RUN git clone https://github.com/LichtenbergCode/tello-pid-altitude-control-ros2.git
+
+WORKDIR /home
+
 CMD ["bash"]
