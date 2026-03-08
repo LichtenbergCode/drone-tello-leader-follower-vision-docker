@@ -69,7 +69,8 @@ RUN apt-get install -y \
     libxkbcommon-x11-0 \
     libxtst6 \
     libxi6 \
-    console-setup
+    console-setup \
+    kbd
 
 # Download Raspberry Pi examples
 RUN git clone --depth 1 https://github.com/raspberrypi/rpicam-apps.git
