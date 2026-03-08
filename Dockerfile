@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:bookworm 
 
 # Install generic requirements
 RUN apt-get update && \
@@ -57,6 +57,9 @@ RUN apt-get install -y rpicam-apps hailo-tappas-core-3.28.2
 
 # Dependencies for hailo-rpi5-examples
 RUN apt-get install -y python3-venv meson
+
+# Installing Tkinter 
+RUN apt-get install -y python3-tk
 
 # Download Raspberry Pi examples
 RUN git clone --depth 1 https://github.com/raspberrypi/rpicam-apps.git
