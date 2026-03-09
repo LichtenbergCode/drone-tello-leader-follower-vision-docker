@@ -7,7 +7,7 @@ docker compose exec hailo-ubuntu-pi /bin/bash
 ---
 apt install hailo-all 
 ---
-verify installation 
+verify hailo installation 
 
 hailortcli fw-control identify 
 gst-inspect-1.0 hailotools 

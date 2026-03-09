@@ -104,6 +104,5 @@ RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-int
 WORKDIR /home/ros
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower.git 
 
-WORKDIR /home
 
 CMD ["bash"]
