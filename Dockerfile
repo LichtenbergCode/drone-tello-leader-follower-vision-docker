@@ -94,9 +94,14 @@ RUN wget https://github.com/Ar-Ray-code/rpi-bullseye-ros2/releases/download/ros2
 # Hailo    
 WORKDIR /home/ros
 USER ros
-RUN git clone https://github.com/hailo-ai/hailo-rpi5-examples.git 
-WORKDIR /home/ros/hailo-rpi5-examples
+RUN git clone https://github.com/hailo-ai/hailo-apps.git
+
+WORKDIR /home/ros/hailo-apps
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-vision.git
+
+WORKDIR /home/ros/hailo-apps/drone_resources
+COPY drone_det.hef drone_detection.json yolov8s.hef ./
+
 
 # ROS OpenCV
 WORKDIR /home/ros/vision_opencv/src
