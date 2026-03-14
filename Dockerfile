@@ -100,8 +100,7 @@ WORKDIR /home/ros/hailo-apps
 RUN git clone https://github.com/LichtenbergCode/drone-tello-leader-follower-vision.git
 
 WORKDIR /home/ros/hailo-apps/drone_resources
-COPY drone_det.hef drone_detection.json yolov8s.hef ./
-
+COPY drone_det.hef drone_detection.json ./
 
 # ROS OpenCV
 WORKDIR /home/ros/vision_opencv/src
