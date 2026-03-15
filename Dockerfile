@@ -74,7 +74,7 @@ RUN apt-get install -y \
 # Installing ping and dependencies 
 RUN apt-get install -y \
     iputils-ping \
-    iproute2 net-tools dnsutils \
+    iproute2 net-tools dnsutils 
 
 # Download Raspberry Pi examples
 RUN git clone --depth 1 https://github.com/raspberrypi/rpicam-apps.git
